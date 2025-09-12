@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar pais</title>
+</head>
+<body>
+    <h1>Seu Pais</h1>
+    Seu Pais é: <input type = "text" nome = "txtpais" id = "txtpais">
+        <input type = "button" value = "verificar" onclick = "resultado()">
+        <div id = "resultado">
+
+        </div>
+
+        <script>
+            function resultado(){
+               var txtp = window.document.querySelector("input#txtpais");
+               var res = window.document.getElementById("resultado");
+               var pas = txtp.value;
+               res.innerHTML = `<p>Vivendo em ${pas}</p>`;
+               if (pas.toLowerCase() === "brasil") {
+                res.innerHTML += `<p>Você é <strong>Brasileiro</strong> uhhuu!!</p>`;
+               }else{
+                res.innerHTML += `<p>Você é <strong>Estrangeiro</strong></p>`;
+
+               }
+                
+
+            }
+        </script>
+</body>
+</html>
